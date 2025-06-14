@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Anu Verma</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: radial-gradient(circle, #ffe6f0, #ffb3cc, #ff80b3);
+      overflow-x: hidden;
+      min-height: 100vh;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .confetti {
+      position: fixed;
+      pointer-events: none;
+      width: 100vw;
+      height: 100vh;
+      top: 0; left: 0;
+      z-index: 100;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .photo-line {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .photo-line img {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border: 4px solid #fff;
+      border-radius: 0; /* square */
+      box-shadow: 0 0 20px 5px #ffb3cc, 0 0 10px #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fff;
+    }
+
+    .photo-line img:hover {
+      transform: scale(1.2) rotate(10deg);
+      z-index: 10;
+      box-shadow: 0 0 30px 10px #ff66cc, 0 0 20px #fff;
+    }
+
+    /* Diagonal line (y = x) layout */
+    .photo-line img:nth-child(1) { top: 0px; left: 0px; }
+    .photo-line img:nth-child(2) { top: 80px; left: 80px; }
+    .photo-line img:nth-child(3) { top: 160px; left: 160px; }
+    .photo-line img:nth-child(4) { top: 240px; left: 240px; }
+    .photo-line img:nth-child(5) { top: 320px; left: 320px; }
+    .photo-line img:nth-child(6) { top: 400px; left: 400px; }
+    .photo-line img:nth-child(7) { top: 480px; left: 480px; }
+    .photo-line img:nth-child(8) { top: 560px; left: 560px; }
+
+    .wish {
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      background: linear-gradient(45deg, #ff6ec4, #7873f5, #ffb347, #ff6ec4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-in-out, heartbeat 1.5s infinite;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1);}
+      10%, 30% { transform: scale(1.08);}
+      20%, 40% { transform: scale(0.95);}
+      50% { transform: scale(1);}
+    }
+
+    .cake-svg {
+      width: 120px;
+      margin: 1.5rem auto 0.5rem auto;
+      display: block;
+      animation: fadeIn 2s 0.5s backwards;
+    }
+
+    .message {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      margin-top: 0.5rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 0.5rem 1rem;
+      display: inline-block;
+      margin-bottom: 0.3rem;
+      box-shadow: 0 2px 8px rgba(255, 182, 193, 0.2);
+      animation: fadeIn 2s;
+    }
+
+    .dob {
+      font-size: 1.1rem;
+      margin-top: 0.3rem;
+      font-style: italic;
+      color: #ffe6f0;
+      letter-spacing: 1px;
+      animation: fadeIn 2s;
+    }
+
+    .music-btn {
+      background: #ff6ec4;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 0.5rem 1.2rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 1.2rem;
+      box-shadow: 0 2px 8px #ffb3cc;
+      transition: background 0.3s;
+    }
+
+    .music-btn:hover {
+      background: #7873f5;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .photo-line {
+        height: 700px;
+      }
+      .photo-line img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas class="confetti"></canvas>
+  <div class="container">
+    <div class="photo-line">
+      <img src="anu1.jpg" alt="anu1" />
+      <img src="anu2.jpg" alt="Anu 2" />
+      <img src="anu3.jpg" alt="Anu 3" />
+      <img src="anu4.jpg" alt="Anu 4" />
+      <img src="anu5.jpg" alt="Anu 5" />
+      <img src="anu6.jpg" alt="Anu 6" />
+      <img src="anu7.jpg" alt="Anu 7" />
+      <img src="anu8.jpg" alt="Anu 8" />
+    </div>
+
+    <svg class="cake-svg" viewBox="0 0 64 64">
+      <ellipse cx="32" cy="54" rx="24" ry="6" fill="#ffb3cc"/>
+      <rect x="8" y="24" width="48" height="30" rx="10" fill="#fff"/>
+      <rect x="12" y="28" width="40" height="18" rx="8" fill="#ffb3cc"/>
+      <rect x="24" y="16" width="16" height="12" rx="6" fill="#ffe6f0"/>
+      <rect x="30" y="8" width="4" height="10" rx="2" fill="#ffb347"/>
+      <circle cx="32" cy="8" r="2" fill="#ff6ec4"/>
+    </svg>
+
+    <h1 class="wish">🎉 Happy Birthday, Dear Bestie! 🎂</h1>
+    <h1 class="wish"> ANU VERMA </h1>
+    <h2> Gudiya , Laaddo , Jaan , Babu , Cutie............</h2>
+    <p class="message">Wishing you endless smiles, sweet memories, and magical moments on your day! </p>
+    <p class="message">Happy birthday to my wonderful sister and best friend.</p>
+    <p class="message">Happy birthday to my partner in crime!</p>
+    <p class="message">"I love you more than words can say, sis. Happy birthday!"</p>
+    <p class="dob">Date of Birth: 26 August</p>
+
+    <button class="music-btn" onclick="toggleMusic()">🎵 Play/Pause My Singing</button>
+    <audio id="bday-audio" src="birthday.mp3" loop></audio>
+  </div>
+
+  <script>
+    // Confetti
+    const canvas = document.querySelector('.confetti');
+    const ctx = canvas.getContext('2d');
+    let W = window.innerWidth, H = window.innerHeight;
+    canvas.width = W; canvas.height = H;
+    let confetti = [];
+    for(let i=0;i<120;i++){
+      confetti.push({
+        x: Math.random()*W,
+        y: Math.random()*H,
+        r: Math.random()*6+4,
+        d: Math.random()*120,
+        color: `hsl(${Math.random()*360},90%,80%)`,
+        tilt: Math.random()*10-10
+      });
+    }
+    function drawConfetti(){
+      ctx.clearRect(0,0,W,H);
+      confetti.forEach(c=>{
+        ctx.beginPath();
+        ctx.arc(c.x, c.y, c.r, 0, Math.PI*2, false);
+        ctx.fillStyle = c.color;
+        ctx.fill();
+      });
+      updateConfetti();
+    }
+    let angle = 0;
+    function updateConfetti(){
+      angle += 0.01;
+      confetti.forEach((c,i)=>{
+        c.y += Math.cos(angle + c.d) + 1 + c.r/2;
+        c.x += Math.sin(angle) * 2;
+        if(c.y > H){
+          confetti[i] = {
+            x: Math.random()*W,
+            y: -10,
+            r: c.r,
+            d: c.d,
+            color: c.color,
+            tilt: c.tilt
+          }
+        }
+      });
+    }
+    setInterval(drawConfetti, 20);
+    window.addEventListener('resize', ()=>{
+      W = window.innerWidth; H = window.innerHeight;
+      canvas.width = W; canvas.height = H;
+    });
+
+    // Music toggle
+    function toggleMusic() {
+      const audio = document.getElementById('bday-audio');
+      if (audio.paused) audio.play();
+      else audio.pause();
+    }
+  </script>
+</body>
+</html>
